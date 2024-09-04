@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Event_Planner.Views.CalendarPage">
+    <StackLayout>
+        <Label Text="Your Events" FontSize="Medium" />
+        <ListView ItemsSource="{Binding Events}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding EventName}" Detail="{Binding EventDate}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Event" Command="{Binding AddEventCommand}" />
+    </StackLayout>
+</ContentPage>
+
